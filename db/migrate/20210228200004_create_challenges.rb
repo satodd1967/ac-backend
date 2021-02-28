@@ -3,9 +3,9 @@ class CreateChallenges < ActiveRecord::Migration[6.0]
     create_table :challenges do |t|
       t.string :name
       t.text :description
-      t.string :start_date
+      t.date :start_date
       t.integer :duration
-      t.string :end_date
+      t.date :end_date
       t.integer :active_calorie_goal
       t.integer :points_worked_out
       t.integer :points_tracked_food

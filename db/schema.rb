@@ -27,9 +27,9 @@ ActiveRecord::Schema.define(version: 2021_02_28_201225) do
   create_table "challenges", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.string "start_date"
+    t.date "start_date"
     t.integer "duration"
-    t.string "end_date"
+    t.date "end_date"
     t.integer "active_calorie_goal"
     t.integer "points_worked_out"
     t.integer "points_tracked_food"
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2021_02_28_201225) do
   end
 
   create_table "logs", force: :cascade do |t|
-    t.string "log_date"
+    t.date "log_date"
     t.boolean "worked_out"
     t.boolean "tracked_food"
     t.float "weight"

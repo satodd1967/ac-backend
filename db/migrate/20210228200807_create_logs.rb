@@ -1,7 +1,7 @@
 class CreateLogs < ActiveRecord::Migration[6.0]
   def change
     create_table :logs do |t|
-      t.string :log_date
+      t.date :log_date
       t.boolean :worked_out
       t.boolean :tracked_food
       t.float :weight
