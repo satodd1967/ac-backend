@@ -1,4 +1,4 @@
-class ChallengeGoalsController < ApplicationController
+class Api::ChallengeGoalsController < ApplicationController
   before_action :set_challenge_goal, only: [:show, :update, :destroy]
 
   # GET /challenge_goals

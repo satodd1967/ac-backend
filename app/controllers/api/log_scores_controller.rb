@@ -1,4 +1,4 @@
-class LogScoresController < ApplicationController
+class Api::LogScoresController < ApplicationController
   before_action :set_log_score, only: [:show, :update, :destroy]
 
   # GET /log_scores

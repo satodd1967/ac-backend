@@ -1,4 +1,4 @@
-class ChallengesController < ApplicationController
+class Api::ChallengesController < ApplicationController
   before_action :set_challenge, only: [:show, :update, :destroy]
 
   # GET /challenges
