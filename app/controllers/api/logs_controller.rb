@@ -3,14 +3,16 @@ class Api::LogsController < ApplicationController
 
   # GET /logs
   def index
-    @logs = Log.all
-
-    render json: @logs
+    # @logs = Log.all
+    # render json: @logs
+    logs = Log.all
+    render json: LogSerializer.new(logs)
   end
 
   # GET /logs/1
   def show
-    render json: @log
+    # render json: @log
+    render json: LogSerializer.new(@log)
   end
 
   # POST /logs
