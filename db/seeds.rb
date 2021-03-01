@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Users
-kris = User.create(email: "kris@google.com", password: "Kris1!", username: "kris")
-tim = User.create(email: "tim@google.com", password: "Tim1!", username: "tim")
-patrick = User.create(email: "patrick@google.com", password: "Patrick1!", username: "patrick")
-joe = User.create(email: "joe@google.com", password: "Joe1!", username: "joe")
+kris = User.create(email: "kris@google.com", password: "Kris1!", username: "kris", image: "images/users/defaultUser.png")
+tim = User.create(email: "tim@google.com", password: "Tim1!", username: "tim", image: "images/users/defaultUser.png")
+patrick = User.create(email: "patrick@google.com", password: "Patrick1!", username: "patrick", image: "images/users/defaultUser.png")
+joe = User.create(email: "joe@google.com", password: "Joe1!", username: "joe", image: "images/users/defaultUser.png")
 
 # User Logs
 krisl1 = Log.create(log_date: (Date.current + 1), worked_out: "1", tracked_food: "1", weight: "134.57", body_fat: ".2275", active_calories: "600", calories: "2200", user: kris)
