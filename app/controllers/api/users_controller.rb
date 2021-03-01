@@ -11,7 +11,8 @@ class Api::UsersController < ApplicationController
 
   # GET /users/1
   def show
-    render json: @user
+    # render json: @user
+    render json: UserSerializer.new(@user)
   end
 
   # POST /users

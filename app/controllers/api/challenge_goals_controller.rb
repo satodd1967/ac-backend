@@ -3,14 +3,16 @@ class Api::ChallengeGoalsController < ApplicationController
 
   # GET /challenge_goals
   def index
-    @challenge_goals = ChallengeGoal.all
-
-    render json: @challenge_goals
+    # @challenge_goals = ChallengeGoal.all
+    # render json: @challenge_goals
+    challenge_goals = ChallengeGoal.all
+    render json: ChallengeGoalSerializer.new(challenge_goals)
   end
 
   # GET /challenge_goals/1
   def show
-    render json: @challenge_goal
+    # render json: @challenge_goal
+    render json: ChallengeGoalSerializer.new(@challenge_goal)
   end
 
   # POST /challenge_goals
