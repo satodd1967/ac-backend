@@ -3,14 +3,16 @@ class Api::LogScoresController < ApplicationController
 
   # GET /log_scores
   def index
-    @log_scores = LogScore.all
-
-    render json: @log_scores
+    # @log_scores = LogScore.all
+    # render json: @log_scores
+    log_scores = LogScore.all
+    render json: LogScoreSerializer.new(log_scores)
   end
 
   # GET /log_scores/1
   def show
-    render json: @log_score
+    # render json: @log_score
+    render json: LogScoreSerializer.new(@log_score)
   end
 
   # POST /log_scores
