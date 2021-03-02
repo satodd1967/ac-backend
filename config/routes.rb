@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get "/login", to: "sessions#"
+
   namespace :api do
     resources :log_scores
     resources :logs
