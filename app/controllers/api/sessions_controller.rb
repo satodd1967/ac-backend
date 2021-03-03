@@ -1,11 +1,7 @@
 class Api::SessionsController < ApplicationController
 
     def create
-
-    end
-
-    def
-
+       binding.pry
     end
 
 end
