@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   post "/login", to: "api/sessions#create"
+  get "/get_current_user", to: "api/sessions#get_current_user"
 
   namespace :api do
     resources :log_scores
