@@ -18,7 +18,7 @@ class Api::ChallengesController < ApplicationController
   # POST /challenges
   def create
     @challenge = Challenge.new(challenge_params)
-
+    @challenge.set_challenge_end_date_create
     if @challenge.save
       render json: @challenge, status: :created, location: api_challenge_url(@challenge)
     else
