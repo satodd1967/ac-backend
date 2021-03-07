@@ -12,6 +12,8 @@ class ChallengeSerializer
     :points_maintain_weight,
     :points_maintain_body_fat,
     :points_met_active_calorie_goal,
+    :user_id,
+    :user,
     :challenge_goals,
     :users,
     :logs,
