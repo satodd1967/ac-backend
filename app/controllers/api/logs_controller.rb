@@ -20,7 +20,7 @@ class Api::LogsController < ApplicationController
     @log = Log.new(log_params)
 
     if @log.save
-      render json: @log, status: :created, location: @log
+      render json: @log, status: :created, location: api_log_url(@log)
     else
       render json: @log.errors, status: :unprocessable_entity
     end
