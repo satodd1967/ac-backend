@@ -20,6 +20,7 @@ class Api::LogsController < ApplicationController
     @log = Log.new(log_params)
 
     if @log.save
+      @log.create_log_scores
       render json: @log, status: :created, location: api_log_url(@log)
     else
       render json: @log.errors, status: :unprocessable_entity
@@ -29,6 +30,7 @@ class Api::LogsController < ApplicationController
   # PATCH/PUT /logs/1
   def update
     if @log.update(log_params)
+      @log.update_log_scores
       render json: @log
     else
       render json: @log.errors, status: :unprocessable_entity

@@ -29,6 +29,11 @@ class Api::ChallengesController < ApplicationController
   # PATCH/PUT /challenges/1
   def update
     if @challenge.update(challenge_params)
+        @challenge.users.each do |user|
+        user.logs.each do |log|
+            log.update_log_scores
+        end
+      end
       render json: @challenge
     else
       render json: @challenge.errors, status: :unprocessable_entity

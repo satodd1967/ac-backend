@@ -20,6 +20,7 @@ class Api::ChallengeGoalsController < ApplicationController
     @challenge_goal = ChallengeGoal.new(challenge_goal_params)
 
     if @challenge_goal.save
+      @challenge_goal.cg_create_log_scores
       render json: @challenge_goal, status: :created, location: api_challenge_goal_url(@challenge_goal)
     else
       render json: @challenge_goal.errors, status: :unprocessable_entity
@@ -29,6 +30,9 @@ class Api::ChallengeGoalsController < ApplicationController
   # PATCH/PUT /challenge_goals/1
   def update
     if @challenge_goal.update(challenge_goal_params)
+        @challenge_goal.user.logs.each do |log|
+        log.update_log_scores
+    end
       render json: @challenge_goal
     else
       render json: @challenge_goal.errors, status: :unprocessable_entity
