@@ -7,5 +7,6 @@ class LogSerializer
     :body_fat,
     :active_calories,
     :calories,
-    :log_scores
+    :log_scores,
+    :user
 end
