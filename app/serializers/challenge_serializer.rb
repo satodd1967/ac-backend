@@ -14,8 +14,29 @@ class ChallengeSerializer
     :points_met_active_calorie_goal,
     :user_id,
     :user,
-    :challenge_goals,
     :users,
+    :challenge_goals,
     :logs,
     :log_scores
+
+    attribute :user do |object|
+      {
+        id: object.user.id,
+        username: object.user.username,
+        email: object.user.email,
+        image: object.user.image
+      }
+    end
+
+    attribute :users do |object|
+      object.users.map do |user|
+        {
+          id: user.id,
+          username: user.username,
+          email: user.email,
+          image: user.image
+        }
+      end
+    end
+
 end

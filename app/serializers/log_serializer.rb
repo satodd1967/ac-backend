@@ -9,4 +9,14 @@ class LogSerializer
     :calories,
     :log_scores,
     :user
+
+    attribute :user do |object|
+      {
+        id: object.user.id,
+        username: object.user.username,
+        email: object.user.email,
+        image: object.user.image
+      }
+    end
+
 end
