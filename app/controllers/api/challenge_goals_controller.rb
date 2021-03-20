@@ -41,7 +41,11 @@ class Api::ChallengeGoalsController < ApplicationController
 
   # DELETE /challenge_goals/1
   def destroy
-    @challenge_goal.destroy
+    if @challenge_goal.destroy
+      render json: { data: "Challenge Goal destroyed" }, status: :ok
+    else
+      render json: @challenge_goal.errors, status: :unprocessable_entity
+    end
   end
 
   private
