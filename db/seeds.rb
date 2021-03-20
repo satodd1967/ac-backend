@@ -43,9 +43,9 @@ c2 = Challenge.create(name: "The Humiliation Challenge", description: "Everyone 
     c2.end_date = (c2.start_date + (c2.duration*7))
     c2.save
     # Challenge Goals
-    krisCg2 = ChallengeGoal.create(start_weight: "135.5", start_body_fat: ".2323", start_calorie_goal: "2300", user: kris, challenge: c2)
-    timCg2 = ChallengeGoal.create(start_weight: "175.2", start_body_fat: ".2545", start_calorie_goal: "3000", user: tim, challenge: c2)
-    patrickCg2 = ChallengeGoal.create(start_weight: "185.8", start_body_fat: ".2745", start_calorie_goal: "3100", user: patrick, challenge: c2)
+    krisCg2 = ChallengeGoal.create(start_weight: "123.5", start_body_fat: ".2123", start_calorie_goal: "2300", user: kris, challenge: c2)
+    timCg2 = ChallengeGoal.create(start_weight: "170.1", start_body_fat: ".2345", start_calorie_goal: "3000", user: tim, challenge: c2)
+    patrickCg2 = ChallengeGoal.create(start_weight: "178.7", start_body_fat: ".2645", start_calorie_goal: "3100", user: patrick, challenge: c2)
 
 # Challenge 3
 c3 = Challenge.create(name: "Tim's Body Fat Liquidator", description: "The way of the Samurai", start_date: (Date.current + 30), duration: "6", active_calorie_goal: "400", points_worked_out: "20", points_tracked_food: "15", points_met_calorie_goal: "15", points_maintain_weight: "10", points_maintain_body_fat: "10", points_met_active_calorie_goal: "10", user: tim)
@@ -53,8 +53,8 @@ c3 = Challenge.create(name: "Tim's Body Fat Liquidator", description: "The way o
     c3.end_date = (c3.start_date + (c3.duration*7))
     c3.save
     # Challenge Goals
-    krisCg3 = ChallengeGoal.create(start_weight: "135.5", start_body_fat: ".2323", start_calorie_goal: "2300", user: kris, challenge: c3)
-    timCg3 = ChallengeGoal.create(start_weight: "175.2", start_body_fat: ".2545", start_calorie_goal: "3000", user: tim, challenge: c3)
+    krisCg3 = ChallengeGoal.create(start_weight: "132.4", start_body_fat: ".2234", start_calorie_goal: "2300", user: kris, challenge: c3)
+    timCg3 = ChallengeGoal.create(start_weight: "168.1", start_body_fat: ".2345", start_calorie_goal: "3000", user: tim, challenge: c3)
 
 Log.all.each do |log|
     log.user.challenge_goals.each do |cg|
