@@ -5,5 +5,5 @@ class LogScoreSerializer
     :points_met_calorie_goal,
     :points_maintain_weight,
     :points_maintain_body_fat,
-    :points_met_active_calorie_goal 
+    :points_met_active_calorie_goal
 end
