@@ -22,7 +22,7 @@ class Api::ChallengesController < ApplicationController
     if @challenge.save
       render json: @challenge, status: :created, location: api_challenge_url(@challenge)
     else
-      render json: @challenge.errors, status: :unprocessable_entity
+      render json: {error: @challenge.errors.full_messages}, status: :unprocessable_entity
     end
   end
 
