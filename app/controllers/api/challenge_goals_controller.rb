@@ -23,7 +23,7 @@ class Api::ChallengeGoalsController < ApplicationController
       @challenge_goal.cg_create_log_scores
       render json: @challenge_goal, status: :created, location: api_challenge_goal_url(@challenge_goal)
     else
-      render json: @challenge_goal.errors, status: :unprocessable_entity
+      render json: {error: @challenge_goal.errors.full_messages}, status: :unprocessable_entity
     end
   end
 
@@ -35,7 +35,7 @@ class Api::ChallengeGoalsController < ApplicationController
     end
       render json: @challenge_goal
     else
-      render json: @challenge_goal.errors, status: :unprocessable_entity
+      render json: {error: @challenge_goal.errors.full_messages}, status: :unprocessable_entity
     end
   end
 
