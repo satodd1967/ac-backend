@@ -36,7 +36,7 @@ class Api::ChallengesController < ApplicationController
       end
       render json: @challenge
     else
-      render json: @challenge.errors, status: :unprocessable_entity
+      render json: {error: @challenge.errors.full_messages}, status: :unprocessable_entity
     end
   end
 
