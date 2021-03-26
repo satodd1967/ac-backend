@@ -23,7 +23,7 @@ class Api::LogsController < ApplicationController
       @log.create_log_scores
       render json: @log, status: :created, location: api_log_url(@log)
     else
-      render json: @log.errors, status: :unprocessable_entity
+      render json: {error: @log.errors.full_messages}, status: :unprocessable_entity
     end
   end
 
@@ -33,7 +33,7 @@ class Api::LogsController < ApplicationController
       @log.update_log_scores
       render json: @log
     else
-      render json: @log.errors, status: :unprocessable_entity
+      render json: {error: @log.errors.full_messages}, status: :unprocessable_entity
     end
   end
 
