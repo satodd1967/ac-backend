@@ -20,7 +20,7 @@ class Log < ApplicationRecord
         attr != "tracked_food"
       }, greater_than: 0
 
-    validates :log_date, uniqueness: true
+    # validates :log_date, uniqueness: true
 
   def create_log_scores
     self.user.challenge_goals.each do |cg|

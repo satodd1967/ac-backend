@@ -21,6 +21,7 @@ class Api::LogsController < ApplicationController
 
     if @log.save
       @log.create_log_scores
+      challenges = Challenge.all
       render json: @log, status: :created, location: api_log_url(@log)
     else
       render json: {error: @log.errors.full_messages}, status: :unprocessable_entity

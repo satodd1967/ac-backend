@@ -33,7 +33,7 @@ joel2 = Log.create(log_date: (Date.current + 32), worked_out: "0", tracked_food:
 joel3 = Log.create(log_date: (Date.current + 33), worked_out: "1", tracked_food: "1", weight: "183.57", body_fat: "27.75", active_calories: "600", calories: "3200", user: joe)
 
 # Challenge 1
-c1 = Challenge.create(name: "Kris's Fat Buster Challenge", description: "Busting fat before fat busting was cool", start_date: (Date.current + 1), duration: "2", active_calorie_goal: "300", points_worked_out: "10", points_tracked_food: "10", points_met_calorie_goal: "10", points_maintain_weight: "10", points_maintain_body_fat: "10", points_met_active_calorie_goal: "10", user: kris)
+c1 = Challenge.create(name: "Kris's Fat Buster Challenge", description: "Busting fat before fat busting was cool", start_date: (Date.current + 1), duration: "4", active_calorie_goal: "300", points_worked_out: "10", points_tracked_food: "10", points_met_calorie_goal: "10", points_maintain_weight: "10", points_maintain_body_fat: "10", points_met_active_calorie_goal: "10", user: kris)
     # Set Challenge End Date
     c1.end_date = (c1.start_date + (c1.duration*7))
     c1.save
