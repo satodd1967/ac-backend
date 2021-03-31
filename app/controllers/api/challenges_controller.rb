@@ -34,7 +34,7 @@ class Api::ChallengesController < ApplicationController
             log.update_log_scores
         end
       end
-      render json: @challenge
+      render json: {challenge: @challenge, main_state: main_state}
     else
       render json: {error: @challenge.errors.full_messages}, status: :unprocessable_entity
     end
