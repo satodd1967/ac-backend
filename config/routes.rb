@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   post "/signup", to: "api/users#create"
   delete "/logout", to: "api/sessions#destroy"
   get "/get_current_user", to: "api/sessions#get_current_user"
+  get "/api/main_state", to: "api/main_state#get_main_state"
 
   namespace :api do
     resources :log_scores
