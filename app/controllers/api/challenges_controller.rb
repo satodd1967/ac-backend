@@ -20,7 +20,7 @@ class Api::ChallengesController < ApplicationController
     @challenge = Challenge.new(challenge_params)
     @challenge.set_challenge_end_date_create
     if @challenge.save
-      render json: @challenge, status: :created, location: api_challenge_url(@challenge)
+      render json: {challenge: @challenge, main_state: main_state}, status: :created, location: api_challenge_url(@challenge)
     else
       render json: {error: @challenge.errors.full_messages}, status: :unprocessable_entity
     end
