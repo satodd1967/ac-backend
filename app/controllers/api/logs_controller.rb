@@ -30,7 +30,7 @@ class Api::LogsController < ApplicationController
   def update
     if @log.update(log_params)
       @log.update_log_scores
-      render json: @log
+      render json: {log: @log main_state: main_state}
     else
       render json: {error: @log.errors.full_messages}, status: :unprocessable_entity
     end
@@ -39,7 +39,7 @@ class Api::LogsController < ApplicationController
   # DELETE /logs/1
   def destroy
     if @log.destroy
-      render json: { data: "Log Destroyed" }, status: :ok
+      render json: { data: "Log Destroyed", main_state: main_state }, status: :ok
     else
       render json: @log.errors, status: :unprocessable_entity
     end
