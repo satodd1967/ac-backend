@@ -30,7 +30,7 @@ class Api::LogsController < ApplicationController
   def update
     if @log.update(log_params)
       @log.update_log_scores
-      render json: {log: @log main_state: main_state}
+      render json: {log: @log, main_state: main_state}
     else
       render json: {error: @log.errors.full_messages}, status: :unprocessable_entity
     end
