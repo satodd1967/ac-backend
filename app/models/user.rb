@@ -17,6 +17,6 @@ class User < ApplicationRecord
         message: "must be a valid email address" }
     validates :password, presence: true
     validates :password, format: { with: /\A(?=.{5,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[[:^alnum:]])/x,
-        message: "must contain at least 8 characters, one lowercase, one upercase, one number and one symbol." }
+        message: "must contain at least 6 characters, one lowercase, one upercase, one number and one symbol." }
 
 end
