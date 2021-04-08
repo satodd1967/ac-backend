@@ -3,15 +3,12 @@ class Api::ChallengesController < ApplicationController
 
   # GET /challenges
   def index
-    # @challenges = Challenge.all
-    # render json: @challenges
     challenges = Challenge.all
     render json: ChallengeSerializer.new(challenges)
   end
 
   # GET /challenges/1
   def show
-    # render json: @challenge
     render json: ChallengeSerializer.new(@challenge)
   end
 
