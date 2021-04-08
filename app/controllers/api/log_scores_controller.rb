@@ -2,40 +2,40 @@ class Api::LogScoresController < ApplicationController
   before_action :set_log_score, only: [:show, :update, :destroy]
 
   # GET /log_scores
-  def index
-    log_scores = LogScore.all
-    render json: LogScoreSerializer.new(log_scores)
-  end
+  # def index
+  #   log_scores = LogScore.all
+  #   render json: LogScoreSerializer.new(log_scores)
+  # end
 
   # GET /log_scores/1
-  def show
-    render json: LogScoreSerializer.new(@log_score)
-  end
+  # def show
+  #   render json: LogScoreSerializer.new(@log_score)
+  # end
 
   # POST /log_scores
-  def create
-    @log_score = LogScore.new(log_score_params)
+  # def create
+  #   @log_score = LogScore.new(log_score_params)
 
-    if @log_score.save
-      render json: @log_score, status: :created, location: @log_score
-    else
-      render json: @log_score.errors, status: :unprocessable_entity
-    end
-  end
+  #   if @log_score.save
+  #     render json: @log_score, status: :created, location: @log_score
+  #   else
+  #     render json: @log_score.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # PATCH/PUT /log_scores/1
-  def update
-    if @log_score.update(log_score_params)
-      render json: @log_score
-    else
-      render json: @log_score.errors, status: :unprocessable_entity
-    end
-  end
+  # def update
+  #   if @log_score.update(log_score_params)
+  #     render json: @log_score
+  #   else
+  #     render json: @log_score.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # DELETE /log_scores/1
-  def destroy
-    @log_score.destroy
-  end
+  # def destroy
+  #   @log_score.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.

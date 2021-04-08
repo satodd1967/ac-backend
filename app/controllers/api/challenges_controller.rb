@@ -2,15 +2,15 @@ class Api::ChallengesController < ApplicationController
   before_action :set_challenge, only: [:show, :update, :destroy]
 
   # GET /challenges
-  def index
-    challenges = Challenge.all
-    render json: ChallengeSerializer.new(challenges)
-  end
+  # def index
+  #   challenges = Challenge.all
+  #   render json: ChallengeSerializer.new(challenges)
+  # end
 
   # GET /challenges/1
-  def show
-    render json: ChallengeSerializer.new(@challenge)
-  end
+  # def show
+  #   render json: ChallengeSerializer.new(@challenge)
+  # end
 
   # POST /challenges
   def create

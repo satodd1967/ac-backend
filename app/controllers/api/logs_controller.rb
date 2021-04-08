@@ -2,18 +2,15 @@ class Api::LogsController < ApplicationController
   before_action :set_log, only: [:show, :update, :destroy]
 
   # GET /logs
-  def index
-    # @logs = Log.all
-    # render json: @logs
-    logs = Log.all
-    render json: LogSerializer.new(logs)
-  end
+  # def index
+  #   logs = Log.all
+  #   render json: LogSerializer.new(logs)
+  # end
 
   # GET /logs/1
-  def show
-    # render json: @log
-    render json: LogSerializer.new(@log)
-  end
+  # def show
+  #   render json: LogSerializer.new(@log)
+  # end
 
   # POST /logs
   def create

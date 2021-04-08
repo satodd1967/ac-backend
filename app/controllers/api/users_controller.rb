@@ -3,15 +3,12 @@ class Api::UsersController < ApplicationController
 
   # GET /users
   def index
-    # @users = User.all
-    # render json: @users
     users = User.all
     render json: UserSerializer.new(users)
   end
 
   # GET /users/1
   def show
-    # render json: @user
     render json: UserSerializer.new(@user)
   end
 
